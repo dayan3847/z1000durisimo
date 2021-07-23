@@ -8,10 +8,8 @@ void declarePin() {
 
 void captureValues() {
   buttonPressed = !digitalRead(BUTTON_PIN);
-
   boxReadPin = analogRead(BOX_TERMISTOR_PIN);
   engineReadPin = analogRead(ENGINE_TERMISTOR_PIN);
-
 }
 
 void updateIndicators() {

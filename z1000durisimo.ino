@@ -31,9 +31,7 @@ void setup () {
   Serial.begin(9600);
   delay(10);
   declarePin();
-
   setupSpeed();
-
   updateIndicators();
 }
 
@@ -41,7 +39,6 @@ void loop() {
   Serial.println(boxTemperature);
   Serial.println(engineTemperature);
   Serial.println(temperatureLedPinStatus);
-  
   captureValues();
   loopSpeed();
   loopThermistor();
