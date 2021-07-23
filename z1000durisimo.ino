@@ -20,11 +20,11 @@ const int BOX_TERMISTOR_PIN = A0;
 const int ENGINE_TERMISTOR_PIN = A1;
 const int TEMPERATURE_LIMIT = 35; //in Celsius
 
-float boxReadPin;
-float engineReadPin;
-float boxTemperature;
-float engineTemperature;
-int temperatureLedPinStatus = false;
+float boxReadPin; //lectura del pin de la caja
+float engineReadPin; //lectura del pin del motor
+float boxTemperature; //temperatura de la caja
+float engineTemperature; //temperatura del motor
+bool temperatureLedPinStatus = false;
 
 //**********VARIABLES_TEMPERATURE_END**************
 void setup () {
@@ -45,5 +45,5 @@ void loop() {
   captureValues();
   loopSpeed();
   loopThermistor();
- updateIndicators();
+  updateIndicators();
 }

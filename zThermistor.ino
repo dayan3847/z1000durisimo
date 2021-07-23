@@ -4,7 +4,6 @@ float getTemperature(int myReading) {
   float logR2, R2, myTemperature;
   float c1 = 2.108508173e-03, c2 = 0.7979204727e-04, c3 = 6.535076315e-07;
 
-
   R2 = R1 * (1023.0 / (float)Vo - 1.0); // conversion de tension a resistencia
   logR2 = log(R2);      // logaritmo de R2 necesario para ecuacion
   myTemperature = (1.0 / (c1 + c2 * logR2 + c3 * logR2 * logR2 * logR2)); // ecuacion S-H
